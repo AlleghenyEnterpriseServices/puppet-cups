@@ -21,10 +21,6 @@ class cups::server::config inherits cups::server {
     group => 'lp'
   }
 
-  file { '/etc/cups/lpoptions':
-    ensure => 'absent',
-  }
-
   file { '/etc/cups/cupsd.conf':
     ensure  => 'file',
     mode    => '0640',
